@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Calculador de Raízes - Equação do 2º Grau</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('images/fundocurriculo.jpg'); 
+            background-size: cover; 
+            background-position: center center; 
+            background-attachment: fixed; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px; 
+            background-color: white;
+            opacity: 0.9;
+        }
+        h2 {
+            color: #333;
+        }
+        .negrito {
+            font-weight: bold;
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%; 
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #af4c4c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #aa3c3c;;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2><i>Calculador de Raízes</i></h2> 
+        <form>
+            <legend class="negrito">Informe os valores:</legend>
+            <br>
+            <label for="a">Valor a:</label>
+            <input type="number" id="a" name="a">
+            <label for="b">Valor b:</label>
+            <input type="number" id="b" name="b">
+            <label for="c">Valor c:</label>
+            <input type="number" id="c" name="c">
+        </form>
+        <p>As raízes da equação são:</p>
+        <p id="demo"></p>
+
+        <button type="button" onclick="calcularRaizes()">Calcular</button>
+    </div>
+
+    <script>
+        function calcularRaizes() {
+            let a = parseFloat(document.getElementById("a").value);
+            let b = parseFloat(document.getElementById("b").value);
+            let c = parseFloat(document.getElementById("c").value);
+            
+          
+            if (isNaN(a) || isNaN(b) || isNaN(c)) {
+                document.getElementById("demo").innerHTML = "Por favor, insira todos os valores antes de calcular.";
+                return;
+            }
+
+            let delta = (b * b) - (4 * a * c);
+            let resultado = '';
+
+            if (delta > 0) {
+                let raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+                let raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
+                resultado = `Raízes: x1 = ${raiz1.toFixed(2)}, x2 = ${raiz2.toFixed(2)}`;
+            } else if (delta === 0) {
+                let raiz = -b / (2 * a);
+                resultado = `Raiz única: x = ${raiz.toFixed(2)}`;
+            } else {
+                resultado = "Não há raízes reais.";
+            }
+
+            document.getElementById("demo").innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>

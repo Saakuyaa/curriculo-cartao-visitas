@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh; 
+  margin: 0; 
+}
+
+header {
+  background-color: rgb(241, 6, 65);
+  text-align: center;
+  padding: 2px;
+  font-size: 30px;
+  color: white;
+}
+
+section {
+  display: flex; 
+  flex: 1; 
+}
+
+nav {
+  width: 30%;
+  background: #f1f1f1;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  width: 70%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+footer {
+  background-color: rgb(241, 6, 65);
+  padding: 10px;
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  margin-top: auto; 
+}
+.navegador{
+  font-size: 30px;
+}
+.links{
+  font-size: 22px;
+}
+.contartigo{
+  padding-left: 18%;
+}
+.iframe-bordered {
+  border: 2px solid #af4c4c; /* Cor da borda */
+  border-radius: 5px; /* Cantos arredondados */
+  width: 600px; /* Ajusta a largura para o tamanho disponível */
+  height: 500px; /* Ajusta a altura conforme necessário */
+  margin-top: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra para um efeito mais destacado */
+}

@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 2px;
+    box-sizing: border-box;
+    background-color: rgb(211, 212, 201);
+    
+   
+}
+.titulomaratona{
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;
+    padding-top: 14px;
+}
+.subtitulomaratona{
+    font-size: 28px;
+    font-style: italic;
+text-align: center;
+}
+.form-group {
+    display: flex; 
+    gap: 11px; 
+    align-items: center; 
+    flex-wrap: wrap; 
+  }
+  .radio-group {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .radio-button {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin: 0 5px; 
+  }
+  
+  .radio-button input[type="radio"] {
+    margin-top: 2px; 
+  }
+  
+  .radio-button label {
+    margin-bottom: 2px; 
+  }

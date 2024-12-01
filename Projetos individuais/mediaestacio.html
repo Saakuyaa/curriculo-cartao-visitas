@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Calculador de Média</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: url('images/fundocurriculo.jpg'); 
+      background-size: cover; 
+      background-position: center center; 
+      background-attachment: fixed; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      text-align: center;
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px; 
+      background-color: white;
+      opacity: 0.9;
+    }
+    h2 {
+      color: #333;
+    }
+    .negrito {
+      font-weight: bold;
+    }
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%; 
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body> 
+  <div class="container">
+    <h2><i>Calculador de Média:</i></h2> 
+    <form>
+      <legend class="negrito">Informe os valores:</legend>
+      <br>
+      <label for="sm1">Nota do Simulado 1:</label>
+      <input type="number" id="sm1" name="sm1">
+      <label for="sm2">Nota do Simulado 2:</label>
+      <input type="number" id="sm2" name="sm2">
+      <label for="av">Nota da AV:</label>
+      <input type="number" id="av" name="av">
+    </form>
+    <p>A sua média será:</p>
+    <p id="demo"></p>
+   
+    <button type="button" onclick="media()">Calcular</button>
+  </div>
+
+  <script>
+    function media() {
+      let sm1 = parseFloat(document.getElementById("sm1").value);
+      let sm2 = parseFloat(document.getElementById("sm2").value);
+      let av = parseFloat(document.getElementById("av").value);
+
+     
+      if (isNaN(sm1) || isNaN(sm2) || isNaN(av)) {
+        document.getElementById("demo").innerHTML = "Por favor, insira todas as notas antes de calcular.";
+        return;
+      }
+
+      
+      let media = (sm1 / 10) + (sm2 / 10) + av;
+     
+      if (media >= 6) {
+        document.getElementById("demo").innerHTML = "Média Final: " + media.toFixed(2) + " - Aprovado!";
+      } else {
+        document.getElementById("demo").innerHTML = "Média Final: " + media.toFixed(2) + " - Reprovado!";
+      }
+    }
+  </script>
+</body>
+</html> 

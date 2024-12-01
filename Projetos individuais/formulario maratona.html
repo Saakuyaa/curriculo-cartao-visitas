@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/icon.ico">
+    <link rel="stylesheet" href="formulario.css">
+    <title>Formulário da Maratona</title>
+</head>
+<body>
+
+  <h2 class="titulomaratona">Ficha de inscrição para maratona de corrida de Carapicuíba</h2>
+  <h3 class="subtitulomaratona">Local: centro de Carapicuíba</h3>
+
+  <form action="" target="_top">
+    <fieldset>
+      <legend>Dados pessoais:</legend>
+      <div class="form-group">
+        <label for="fname">Nome:</label>
+        <input type="text" id="fname" name="fname">
+  
+        <label for="lname">Sobrenome:</label>
+        <input type="text" id="lname" name="lname">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="fidade">Idade:</label>
+        <input type="number" id="fidade" name="fidade">
+  
+        <label for="lpeso">Peso:</label>
+        <input type="number" id="lpeso" name="lpeso">
+  
+        <label for="laltura">Altura:</label>
+        <input type="number" id="laltura" name="laltura">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" name="address">
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+  
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" placeholder="Apenas números">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="city">Cidade:</label>
+        <input type="text" id="city" name="city">
+  
+        <label for="estate">Estado:</label>
+        <input type="text" id="estate" name="estate">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="birthday">Data de Nascimento:</label>
+        <input type="date" id="birthday" name="birthday">
+  
+        <label for="gender">Gênero:</label>
+        <select id="gender" name="gender">
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+  
+        <label for="rg">RG:</label>
+        <input type="number" id="rg" name="rg">
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Distância preferida:</label>
+        <input type="radio" id="10km" name="fav_distance" value="10km">
+        <label for="10km">10 km</label>
+  
+        <input type="radio" id="21km" name="fav_distance" value="21km">
+        <label for="21km">21 km</label>
+  
+        <input type="radio" id="42km" name="fav_distance" value="42km">
+        <label for="42km">42 km</label>
+      </div>
+      <br>
+      <div class="form-group">
+        <label>Tamanho da Camiseta:</label>
+        <div class="radio-group">
+          <div class="radio-button">
+            <input type="radio" id="P" name="tamanho" value="P">
+            <label for="P">P</label>
+          </div>
+
+          <div class="radio-button">
+            <input type="radio" id="M" name="tamanho" value="M">
+            <label for="M">M</label>
+          </div>
+
+          <div class="radio-button">
+            <input type="radio" id="G" name="tamanho" value="G">
+            <label for="G">G</label>
+          </div>
+        </div>
+      </div>
+      <br>
+      <input type="submit" onclick="alert('Happy Halloween!')" value="Enviar">
+
+    </fieldset>
+  </form>
+
+</body>
+</html>
